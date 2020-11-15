@@ -94,6 +94,7 @@ img {
 .site-nav .item {
   padding-top: 32px;
   padding-bottom: 32px;
+  position: relative;
 }
 
 .contacts-nav {
@@ -133,6 +134,7 @@ img {
   line-height: 1.143;
   letter-spacing: 0.02em;
   text-decoration: none;
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .link:hover,
@@ -148,8 +150,22 @@ img {
   color: var(--text-accent);
 }
 
+.link-secondary::before {
+  content: "";
+  display: block;
+
+  bottom: 0;
+  margin: 0;
+  position: absolute;
+  width: 100%;
+  height: 4px;
+  background-color: var(--text-accent);
+  border-radius: 2px;
+}
+
 .address-link {
   color: var(--primary-text-gray);
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .address-link:hover .svg-envelope,
@@ -168,6 +184,8 @@ img {
   width: 16px;
   height: 12px;
   margin-right: 10px;
+
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .contacts-nav .svg-telephone {
@@ -176,6 +194,8 @@ img {
   width: 10px;
   height: 16px;
   margin-right: 10px;
+
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 /*Услуги*/
@@ -212,12 +232,15 @@ img {
   font-weight: 500;
   font-size: 16px;
   line-height: 1.62;
+
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .options-button:hover,
 .options-button:focus {
   color: var(--white);
   background-color: var(--text-accent);
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 /* Examples */
@@ -237,6 +260,8 @@ img {
   justify-content: space-between;
   align-items: center;
   border: 1px solid var(--section-border);
+
+  transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .flex-element:hover {
@@ -341,6 +366,7 @@ img {
   height: 44px;
   background-color: rgba(255, 255, 255, 0.1);
   border-radius: 50%;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .social-icons-svg-footer {
