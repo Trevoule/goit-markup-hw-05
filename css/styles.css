@@ -220,21 +220,21 @@ img {
   margin-bottom: 30px;
 }
 
-.hero-button {
-  display: inline-block;
-  color: var(--white);
+.btn {
   background-color: var(--text-accent);
-  font-weight: 700;
-  font-size: 16px;
-  font: inherit;
-  line-height: 1.87;
-  text-decoration: none;
-  list-style-type: none;
+  display: inline-block;
 
   border-radius: 4px;
   padding: 15px 32px;
   min-width: 200px;
   border: 1px solid transparent;
+
+  color: var(--white);
+
+  font-weight: 700;
+  font-size: 16px;
+  font: inherit;
+  line-height: 1.87;
 }
 
 /* Преимущества */
@@ -312,10 +312,10 @@ img {
   margin-right: 30px;
 }
 
-.thumb {
-  /* position: relative; */
-  /* margin: 10px; */
-}
+/* .thumb {
+  position: relative;
+  margin: 10px;
+} */
 
 .thumb > .label {
   position: absolute;
@@ -552,4 +552,78 @@ img {
 .social-icons-link-footer:focus .social-icons-svg,
 .social-icons-link-footer:focus {
   background-color: var(--text-accent);
+}
+
+/* Модальное окно */
+.backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.2);
+
+  opacity: 1;
+
+  transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/*когда бекдроп спрятан - для js */
+.backdrop.is-hidden {
+  opacity: 0;
+  pointer-events: none;
+}
+
+/* модалка спрятана - для js */
+.backdrop.is-hidden .modal {
+  transform: translate(-50%, -50%) scale(1.5);
+}
+
+/* когда показано */
+.modal {
+  position: absolute;
+  position: relative;
+  top: 50%;
+  left: 50%;
+
+  transform: translate(-50%, -50%) scale(1);
+
+  height: 581px;
+  width: 528px;
+  padding: 15px;
+
+  background-color: #fff;
+
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.btn-modal {
+  position: absolute;
+  top: 0;
+  right: 0;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  margin-top: 8px;
+  margin-right: 8px;
+
+  width: 30px;
+  height: 30px;
+
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 50%;
+}
+
+.svg-modal {
+  width: 18px;
+  height: 18px;
+}
+
+.modal-info {
+  padding: 63px 24px;
+  font-size: 18px;
+  line-height: 1.55;
+  color: var(--primary-text-gray);
 }

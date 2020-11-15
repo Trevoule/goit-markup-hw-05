@@ -49,10 +49,10 @@
     <!--Герой-->
     <section class="hero hero-bg">
       <h1 class="hero-title">Эффективные решения <br> для вашего бизнеса </h1>
-      <a href="" class="hero-button">Заказать услугу</a>
+      <button class="btn" data-modal-open>Заказать услугу</button>
     </section>
 
-    <!-- Преимущства -->
+    <!-- Преимущества -->
     <section id="Studio" class="section ">
       <div class="container ">
         <h2 hidden>Студия</h2>
@@ -359,12 +359,31 @@
             <a class="social-icons-link-footer" href="" target="_blank" rel="noopener noreferer" aria-label="Linkedin">
               <svg class="social-icons-svg-footer">
                 <use href="./images/icons/sprite.svg#linkedin"></use>
-              </svg></a>
+              </svg>
+            </a>
           </li>
         </ul>
       </div>
     </div>
   </footer>
+
+  <!-- Модальное окно -->
+  <div class="backdrop is-hidden" data-modal>
+    <div class="modal">
+      <p class="modal-info">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla quis
+        debitis quibusdam doloremque perspiciatis distinctio consequuntur
+        nobis ipsa dolore earum quisquam qui eveniet maxime ad, numquam libero
+        quos, veritatis accusantium similique tempora nemo? Quo consequuntur
+        iusto eius aut facilis doloribus aliquam quae vitae dolor
+        voluptatibus? Accusamus corrupti cumque odio illo.
+      </p>
+      <button class="btn-modal" data-modal-close>
+        <img class="svg-modal" src="./images/icons/close-button.svg" alt=""></button>
+    </div>
+  </div>
+  <script src="./js/modal.js">
+  </script>
 </body>
 
 </html>
