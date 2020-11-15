@@ -140,6 +140,24 @@ body {
   color: var(--primary-text-black);
 }
 
+.head-link-current {
+  display: block;
+  color: var(--primary-text-black);
+  position: relative;
+}
+
+.head-link-current::before {
+  content: "";
+
+  bottom: 0;
+  position: absolute;
+  width: auto;
+  height: 4px;
+  background-color: red;
+  border-radius: 2px;
+  margin-top: 28px;
+}
+
 .address-link {
   color: var(--primary-text-gray);
   align-items: center;
@@ -147,7 +165,7 @@ body {
   /* display: flex; */
 }
 
-.contacts-nav .svg-envelope {
+.svg-envelope {
   align-items: center;
   justify-content: center;
   width: 16px;
@@ -155,7 +173,7 @@ body {
   margin-right: 10px;
 }
 
-.contacts-nav .svg-telephone {
+.svg-telephone {
   align-items: center;
   justify-content: center;
   width: 10px;
@@ -279,8 +297,37 @@ body {
   display: flex;
 }
 
+.portfolio .item {
+  position: relative;
+}
+
 .portfolio .item:not(:last-child) {
   margin-right: 30px;
+}
+
+.thumb {
+  /* position: relative; */
+  /* margin: 10px; */
+}
+
+.thumb > .label {
+  position: absolute;
+  display: flex;
+  width: 100%;
+  padding: 0;
+  bottom: 0;
+  justify-content: center;
+  padding: 27px 80px;
+
+  background-color: rgba(47, 48, 58, 0.8);
+  font-family: inherit;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.172;
+  text-transform: uppercase;
+  color: var(--white);
+  /* border-color: red; */
 }
 
 /* Team */
